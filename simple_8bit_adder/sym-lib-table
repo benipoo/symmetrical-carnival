@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "simple_8bit_adder-altium-import")(type "KiCad")(uri "${KIPRJMOD}/simple_8bit_adder-altium-import.kicad_sym")(options "")(descr ""))
+)
