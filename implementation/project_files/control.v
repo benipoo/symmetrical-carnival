@@ -1,19 +1,19 @@
 `timescale 1ns / 1ps
 
-module control(gcd_done,start,compare,relprime_done,CTRL1,CTRL2,CTRL3,CTRL4,CTRL5,CTRL7,CTRL8,CTRL9,CLK);
-    	 input gcd_done;
-	 input start;
-	 input compare;
-	 input CLK;
-	 input relprime_done;
-    	 output reg CTRL1;
-	 output reg CTRL2;
-	 output reg CTRL3;
-	 output reg CTRL4;
-	 output reg CTRL5;
-	 output reg CTRL7;
-	 output reg CTRL8;
-	 output reg CTRL9;
+module control(
+     input gcd_done,
+	 input start,
+	 input compare,
+	 input CLK,
+	 input relprime_done,
+     output reg CTRL1,
+	 output reg CTRL2,
+	 output reg CTRL3,
+	 output reg CTRL4,
+	 output reg CTRL5,
+	 output reg CTRL7,
+	 output reg CTRL8,
+	 output reg CTRL9);
 	
 	 always @(*)
 		begin

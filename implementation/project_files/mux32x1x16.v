@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 
-module mux32x1x16(mux_input0,mux_input1,selector,mux_output);
-	 input [15:0] mux_input0;
-    	 input [15:0] mux_input1;
-    	 input selector;
-    	 output reg [15:0] mux_output;
+module mux32x1x16(
+	 input [15:0] mux_input0,
+    	 input [15:0] mux_input1,
+    	 input selector,
+    	 output reg [15:0] mux_output);
 	 
 	always @ (mux_input0 or mux_input1 or selector)
 		begin
