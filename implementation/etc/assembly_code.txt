@@ -1,0 +1,33 @@
+lui $at, x
+sor $a0, x
+or $a0, $a0, $at
+lui $at, x
+sor $s3, x
+or $s3, $s3, $at
+ori $s4, $a0, 0
+ori $a0, $s4, 0
+addi $s3, $s3, 1
+ori $a1, $s3, 0
+ori $s1, $a1, 0
+ori $s0, $s4, 0
+jal JUMP
+bne $v0, 1, BNCH
+ori $v1, $s3, 0
+lui $at, x
+sor $v0, x
+or $v0, $v0, $at
+syscall
+bne $s0, 0, BNCH
+ori $v0, $s1, 0
+j JUMP
+bne $s1, 0, BNCH
+ori $v0, $s0, 0
+j JUMP		
+slt $s2, $s1, $s0
+beq $s2, 1, BNCH
+sub $s1, $s1, $s0
+j JUMP
+sub $s0, $s0, $s1
+j JUMP
+jr $ra
+
