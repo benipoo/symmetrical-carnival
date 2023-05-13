@@ -1,0 +1,12 @@
+.title KiCad schematic
+R1 +5V /A R_Small
+NMOS1 __NMOS1
+R0 +5V Net-_NMOS0-D_ R_Small
+NMOS0 __NMOS0
+NMOS2 __NMOS2
+NMOS5 __NMOS5
+NMOS4 __NMOS4
+NMOS3 __NMOS3
+R2 +5V Net-_NMOS2-D_ R_Small
+R3 +5V /OUT R_Small
+.end

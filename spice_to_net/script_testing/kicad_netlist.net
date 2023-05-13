@@ -1,0 +1,112 @@
+(export (version "E")
+  (design
+    (title_block
+      (title)
+      (company)
+      (rev)
+      (date)
+    )
+  )
+)
+
+  (components
+    (comp (ref "NMOS0")
+      (footprint "Package_TO_SOT_SMD:SOT-23")
+      (libsource (lib "Transistor_FET") (part "2N7002")))
+      
+    (comp (ref "NMOS1")
+      (footprint "Package_TO_SOT_SMD:SOT-23")
+      (libsource (lib "Transistor_FET") (part "2N7002")))
+      
+    (comp (ref "NMOS2")
+      (footprint "Package_TO_SOT_SMD:SOT-23")
+      (libsource (lib "Transistor_FET") (part "2N7002")))
+      
+    (comp (ref "NMOS3")
+      (footprint "Package_TO_SOT_SMD:SOT-23")
+      (libsource (lib "Transistor_FET") (part "2N7002")))
+      
+    (comp (ref "NMOS4")
+      (footprint "Package_TO_SOT_SMD:SOT-23")
+      (libsource (lib "Transistor_FET") (part "2N7002")))
+      
+    (comp (ref "NMOS5")
+      (footprint "Package_TO_SOT_SMD:SOT-23")
+      (libsource (lib "Transistor_FET") (part "2N7002")))
+      
+    (comp (ref "R0")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (libsource (lib "custom_library") (part "R_Small")))
+      
+    (comp (ref "R1")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (libsource (lib "custom_library") (part "R_Small")))
+      
+    (comp (ref "R2")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (libsource (lib "custom_library") (part "R_Small")))
+      
+    (comp (ref "R3")
+      (footprint "Resistor_SMD:R_0402_1005Metric")
+      (libsource (lib "custom_library") (part "R_Small")))
+  )
+  
+  (libparts
+    (libpart (lib "Transistor_FET") (part "2N7002")
+      (footprints
+        (fp "SOT?23*")
+      )
+      (description "Resistor, small symbol")
+      (docs "~")
+      (footprints
+        (fp "R_*"))
+      (fields
+        (field (name "Reference") "R")
+        (field (name "Value") "R_Small")
+        (field (name "Datasheet") "~")
+      )
+      (pins
+        (pin (num "1") (name "") (type "passive"))
+        (pin (num "2") (name "") (type "passive"))
+      )
+    )
+  )
+
+  (nets
+    (net (code "1") (name "+5V")
+      (node (ref "R0") (pin "1") (pintype "passive"))
+      (node (ref "R1") (pin "1") (pintype "passive"))
+      (node (ref "R2") (pin "1") (pintype "passive"))
+      (node (ref "R3") (pin "1") (pintype "passive")))
+    (net (code "2") (name "/A")
+      (node (ref "NMOS1") (pin "3") (pinfunction "D") (pintype "passive"))
+      (node (ref "NMOS2") (pin "1") (pinfunction "G") (pintype "input"))
+      (node (ref "R1") (pin "2") (pintype "passive")))
+    (net (code "3") (name "/B")
+      (node (ref "NMOS3") (pin "1") (pinfunction "G") (pintype "input")))
+    (net (code "4") (name "/C")
+      (node (ref "NMOS4") (pin "1") (pinfunction "G") (pintype "input")))
+    (net (code "5") (name "/IN")
+      (node (ref "NMOS0") (pin "1") (pinfunction "G") (pintype "input")))
+    (net (code "6") (name "/OUT")
+      (node (ref "NMOS5") (pin "3") (pinfunction "D") (pintype "passive"))
+      (node (ref "R3") (pin "2") (pintype "passive")))
+    (net (code "7") (name "GND")
+      (node (ref "NMOS0") (pin "2") (pinfunction "S") (pintype "passive"))
+      (node (ref "NMOS1") (pin "2") (pinfunction "S") (pintype "passive"))
+      (node (ref "NMOS4") (pin "2") (pinfunction "S") (pintype "passive"))
+      (node (ref "NMOS5") (pin "2") (pinfunction "S") (pintype "passive")))
+    (net (code "8") (name "Net-(NMOS0-D)")
+      (node (ref "NMOS0") (pin "3") (pinfunction "D") (pintype "passive"))
+      (node (ref "NMOS1") (pin "1") (pinfunction "G") (pintype "input"))
+      (node (ref "R0") (pin "2") (pintype "passive")))
+    (net (code "9") (name "Net-(NMOS2-D)")
+      (node (ref "NMOS2") (pin "3") (pinfunction "D") (pintype "passive"))
+      (node (ref "NMOS5") (pin "1") (pinfunction "G") (pintype "input"))
+      (node (ref "R2") (pin "2") (pintype "passive")))
+    (net (code "10") (name "Net-(NMOS2-S)")
+      (node (ref "NMOS2") (pin "2") (pinfunction "S") (pintype "passive"))
+      (node (ref "NMOS3") (pin "3") (pinfunction "D") (pintype "passive")))
+    (net (code "11") (name "Net-(NMOS3-S)")
+      (node (ref "NMOS3") (pin "2") (pinfunction "S") (pintype "passive"))
+      (node (ref "NMOS4") (pin "3") (pinfunction "D") (pintype "passive")))))
