@@ -1,0 +1,36 @@
+.title KiCad schematic
+Q5_21 __Q5_21
+R15 +5V Net-_Q5_21-D_ R_Small
+R14 +5V Net-_Q5_20-D_ R_Small
+R9 +5V Net-_Q5_14-D_ R_Small
+Q5_14 __Q5_14
+R1 +5V Net-_Q5_2-D_ R_Small
+R5 +5V Net-_Q5_17-G_ R_Small
+Q5_7 __Q5_7
+Q5_2 __Q5_2
+Q5_3 __Q5_3
+Q5_16 __Q5_16
+R11 +5V Net-_Q5_16-D_ R_Small
+R12 +5V Net-_Q5_17-D_ R_Small
+Q5_17 __Q5_17
+R13 +5V /CTRL4 R_Small
+Q5_19 __Q5_19
+Q5_18 __Q5_18
+Q5_20 __Q5_20
+Q5_8 __Q5_8
+Q5_6 __Q5_6
+Q5_5 __Q5_5
+R4 +5V /CTRL5 R_Small
+Q5_9 __Q5_9
+Q5_10 __Q5_10
+R6 +5V Net-_Q5_12-G_ R_Small
+Q5_13 __Q5_13
+R8 +5V Net-_Q5_13-D_ R_Small
+R10 +5V Net-_Q5_10-G_ R_Small
+Q5_15 __Q5_15
+R7 +5V /CTRL8 R_Small
+Q5_11 __Q5_11
+Q5_12 __Q5_12
+Q5_1 __Q5_1
+R3 +5V Net-_Q5_1-D_ R_Small
+.end
